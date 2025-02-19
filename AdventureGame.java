@@ -4,7 +4,7 @@ public class AdventureGame {
     private static boolean hasClothes = false;
     private static boolean hasCoffee = false;
     private static boolean hasCleanClothes = false;
-    private static String currentLocation = "bedroom"; // Track the player's current location
+    private static String currentLocation = "bedroom"; // Track the player's current location. Add more locations and directions
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class AdventureGame {
             }
 
             if (!processCommand(choice, scanner)) {
-                continue; // Skip the prompt if the command was incomplete
+                continue; // Skip the prompt if the command was incomplete. This still doesn't work, but happy with current function
             }
         }
 
@@ -40,7 +40,7 @@ public class AdventureGame {
         if (action.equals("pick") && target.startsWith("up")) {
             String item = target.length() > 3 ? target.substring(3).trim() : "";
             if (item.isEmpty()) {
-                System.out.println("You need to specify what to pick up.");
+                System.out.println("You need to specify what to pick up."); // hate how the 'what do you want to do?' outputs after this.
                 return false;
             } else {
                 pickUpItem(item);
@@ -69,9 +69,9 @@ public class AdventureGame {
                     moveTo("living room");
                     break;
                 default:
-                    System.out.println("For some reason, you are confused by what left or right means, so you just go back to bed." +
+                    System.out.println("For some reason, you are confused by what left or right means, so you just go back to bed." + // add more directions for a better home layout
                                        " You sleep for the whole day, and are only woken up by your phone ringing." +
-                                       " You answer the phone. It's your boss. UH OH, sounds like you've been fired!");
+                                       " You answer the phone. It's your boss. UH OH, sounds like you're in trouble!");
             }
         }
         return true;
@@ -205,7 +205,7 @@ public class AdventureGame {
                     System.out.println("You don't have any clothes to use.");
                 }
                 break;
-            case "coffee":
+            case "coffee": // from an older version of the game. May include in the kitchen segment
                 if (hasCoffee) {
                     System.out.println("You drink the coffee and feel more awake.");
                 } else {

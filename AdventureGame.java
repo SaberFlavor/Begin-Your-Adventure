@@ -144,17 +144,21 @@ public class AdventureGame {
                 break;
             case "bathroom":
                 System.out.println("You take a look around your bathroom. It's small but functional. You see a sink, a mirror, and a shower.");
+                System.out.println("To the right is your bedroom.");
                 break;
             case "hallway":
                 System.out.println("You look around the hallway. It's dimly lit and leads to the rest of the apartment.");
+                System.out.println("To the left is your bedroom and to the right is your kitchen.");
                 break;
             case "kitchen":
                 System.out.println("You look around the kitchen. It's equipped with a stove, refrigerator, and a coffee maker. " +
                                    "There's a bowl of fruit on the counter.");
+                System.out.println("To the left is your living room.");
                 break;
             case "living room":
                 System.out.println("You look around the living room. There's a comfortable couch, a coffee table, and a TV. " +
                                    "The room is well-lit by a large window.");
+                                   System.out.println("To the right is your kitchen.");
                 break;
             default:
                 System.out.println("You look around but don't see anything of interest.");
@@ -231,7 +235,6 @@ public class AdventureGame {
     }
 
     public static void useNightstand() {
-        System.out.println("You open the drawer of the nightstand and find an old journal and a flashlight. " +
-                           "The journal is filled with your childhood memories, and the flashlight can be useful later.");
+        System.out.println("You open the drawer on your nightstand. There's nothing useful.");
     }
 }
